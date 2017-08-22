@@ -1,0 +1,136 @@
+.dialog-container {
+  text-align: center;
+  background:#E6E3DA;
+  color: #CC9E7F;
+  margin: -24px;
+  overflow: hidden;
+  padding: 25px 0px 25px 0px;
+  position: relative;
+}
+
+.guest-name {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0px;
+  line-height: 3.2rem;
+}
+
+.footer-wrapper {
+  height: 25vh;
+  width: 105%;
+  left: -2%;
+  position: absolute;
+  bottom: 0;
+  background-color: #000;
+  transform: rotate(355deg);
+}
+
+.text-wrapper {
+  padding: 15px 30px 0px 30px;
+}
+
+.invitation-text {
+  font-size: 2rem;
+  margin: 0px;
+  line-height: 1.8rem;
+}
+
+.first-line {
+  font-size: 1.5rem;
+  line-height: 1.4rem;
+}
+
+.our-wedding-text {
+  font-size: 2.8rem;
+  line-height: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.date-text {
+ font-size: 3rem;
+ line-height: 2.9rem;
+ letter-spacing: 1px;
+}
+
+.time-text {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+}
+
+.church-name {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: 800;
+}
+
+.church-adress {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.party-invitation-text {
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+}
+
+.party-place {
+  font-size: 3rem;
+  line-height: 3rem;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+.party-adress {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+.goodbye-text {
+  margin: 20px 0px 10px 0px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.confirm-button {
+  clear: both;
+  margin-top: 20px;
+  color:#E6E3DA;
+  background: #CC9E7F;
+  padding: 5px 15px;
+  border-radius: 360px;
+  font-size: 2rem;
+  font-family: 'Amatic SC', cursive;
+}
+
+/deep/ .mat-slide-toggle-content, /deep/ .mat-checkbox-layout .mat-checkbox-label {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.7rem;
+}
+
+/deep/ .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: rgba(204,158,127,0.5)
+}
+
+/deep/ .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #CC9E7F;
+}
+
+/deep/ .mat-checkbox-frame {
+  border-color: #915D39;
+}
+
+/deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #CC9E7F;
+}
+
+.toggle-text {
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+  /deep/ .mat-dialog-container {
+    margin: auto;
+  }
+}

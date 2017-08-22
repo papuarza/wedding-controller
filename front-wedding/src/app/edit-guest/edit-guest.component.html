@@ -1,0 +1,41 @@
+<form class="example-form">
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Cédula" type="number" [(ngModel)]="formInfo.dni" name="dni" (ngModelChange)="checkInput()">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Nombre" type="text" [(ngModel)]="formInfo.name" name="name" (ngModelChange)="checkInput()">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Apellido" type="text" [(ngModel)]="formInfo.lastName" name="lastName" (ngModelChange)="checkInput()">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Apodo" type="text" [(ngModel)]="formInfo.nickname" name="nickname">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <md-checkbox [(ngModel)]="formInfo.couple" name="couple">Pareja</md-checkbox>
+      </td>
+    </tr>
+
+  </table>
+  <p class="error-handler">{{error}}</p>
+  <button type="button" name="button" (click)="editGuest()" class="new-guest" [disabled]="!isValidForm" [ngClass]="{disabled: !isValidForm}">Editar</button>
+</form>

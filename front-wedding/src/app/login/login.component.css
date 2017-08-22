@@ -1,0 +1,30 @@
+.form-login {
+  font-family: "Roboto", sans-serif;
+  width: 40%;
+  padding: 50px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 5%;
+}
+
+.form-login p {
+  font-size: 2rem;
+  margin-top:0;
+}
+
+md-input-container {
+  display: block;
+  text-align: 1rem;
+  font-weight: 100;
+}
+
+button {
+  width: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 30px auto 0px auto;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: #1565c0;
+}

@@ -1,0 +1,70 @@
+<div class="confirmation-container" *ngIf="time">
+  <div class="text-container" *ngIf="guest">
+    <h3 *ngIf="guest.nickname" class="guest-name">Gracias por tu respuesta {{guest.nickname}}!! </h3>
+    <h3 *ngIf="!guest.nickname" class="guest-name">Gracias por tu respuesta {{guest.name}}!!</h3>
+    <div *ngIf="guest.assist == true">
+      <p class="thanks-text">Es un placer tenerte con nosotros en un día tan especial.</p>
+      <p class="change-situation-text">Si por algún motivo finalmente no puedes asistir,<br> por favor modifica la información en esta misma web.</p>
+      <p class="goodbye-text">Te esperamos ahi!</p>
+    </div>
+    <div *ngIf="guest.assist == false">
+      <p class="thanks-text">Es una lástima no tenerte con nosotros en un día tan especial.</p>
+      <p class="change-situation-text">Si finalmente puedes asistir,<br> por favor modifica la información en esta misma web.</p>
+      <p class="goodbye-text">Ojala puedas venir!</p>
+    </div>
+    <a class="present-button mat-elevation-z8">Lista de Regalos</a>
+    <div>
+      <p class="time-text-see-you">Save the date:</p>
+      <div class="time-wrapper">
+        <div class="time-container mat-elevation-z8">
+          <span>{{time.days}}</span>
+        </div>
+        <p class="time-text-outside">días</p>
+      </div>
+      <div class="time-wrapper">
+        <div class="time-container mat-elevation-z8">
+          <span>{{time.hours}}</span>
+        </div>
+        <p class="time-text-outside">horas</p>
+      </div>
+      <div class="time-wrapper">
+        <div class="time-container mat-elevation-z8">
+          <span>{{time.minutes}}</span>
+        </div>
+        <p class="time-text-outside">minutos</p>
+      </div>
+      <div class="time-wrapper">
+        <div class="time-container mat-elevation-z8">
+          <span>{{time.seconds}}</span>
+        </div>
+        <p class="time-text-outside">segundos</p>
+      </div>
+    </div>
+    <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=M2o0bzVhYmxnZHJvYjRtdmlnZnNxOThzMmQgcGFwdS5hcnphQG0&amp;tmsrc=papu.arza%40gmail.com" class="calendar-link">
+      <!-- <img src="../../assets/calendar.svg" alt=""> -->
+      <img src="/images/calendar.svg" alt="">
+      <span>Añadir a mi Calendario</span></a>
+    <h1 class="main-title">#MAGALIYCESAR</h1>
+  </div>
+  <div class="map-container">
+    <div class="over-map">
+
+    </div>
+    <div class="location-container church-location">
+      <div class="location-text-container">
+        <p>Iglesia Sta. María y San Nicolás</p>
+        <p class="address-text">Félix Bogado esq. 18 de Julio</p>
+      </div>
+      <!-- <img src="../../assets/church(1).svg" alt="" class="icon-place ceremony-icon"> -->
+      <img src="/images/church(1).svg" alt="" class="icon-place ceremony-icon">
+    </div>
+    <div class="location-container">
+      <div class="location-text-container">
+        <p>La Riviere</p>
+        <p class="address-text">Av. Paseo del Yacht casi Lapacho Amarillo</p>
+      </div>
+      <!-- <img src="../../assets/toast(1).svg" alt="" class="icon-place toast-icon"> -->
+      <img src="/images/toast(1).svg" alt="" class="icon-place toast-icon">
+    </div>
+  </div>
+</div>

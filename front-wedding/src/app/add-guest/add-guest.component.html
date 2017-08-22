@@ -1,0 +1,40 @@
+<form class="form" #formCtrl="ngForm">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Cédula" type="number" [(ngModel)]="formInfo.dni" name="dni" (ngModelChange)="checkInput()" required>
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Nombre" type="text" [(ngModel)]="formInfo.name" (ngModelChange)="checkInput()" name="name" required>
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Apellido" type="text" [(ngModel)]="formInfo.lastName" (ngModelChange)="checkInput()" name="lastName" required>
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <md-input-container class="example-full-width">
+          <input mdInput placeholder="Apodo" type="text" [(ngModel)]="formInfo.nickname" name="nickname">
+        </md-input-container>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <md-checkbox [(ngModel)]="formInfo.couple" name="couple" class="couple-text">¿Con pareja?</md-checkbox>
+      </td>
+    </tr>
+
+  </table>
+  <p class="error-handler">{{error}}</p>
+  <button type="button" name="button" (click)="addGuest()" class="new-guest" [disabled]="!isValidForm" [ngClass]="{disabled: !isValidForm}">Agregar</button>
+</form>

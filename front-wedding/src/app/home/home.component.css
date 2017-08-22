@@ -1,0 +1,195 @@
+header {
+  /*background-image: url("../../assets/binding_dark.png");*/
+  background-image: url("images//binding_dark.png");
+  background-position: center;
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  position: absolute;
+  top: 0;
+  content: '';
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.85;
+  background: linear-gradient(to right, #CC9E7F, #C5A17D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+}
+
+.check-invitation-button {
+  z-index: 10;
+}
+
+.photo-container {
+  position: absolute;
+  right: 12vw;
+  top: 5vh;
+  height: 90vh;
+  background-color: #E6E3DA;
+  width: 20vw;
+  z-index: 10;
+  border-radius: 2px;
+  transform: rotate(2deg);
+  padding: 2vh 2vh 1vh 2vh;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.photo-item {
+  width: 100%;
+  height: 18vh;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.photo-wrapper-text {
+  color: #CC9E7F;
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  margin: 0px;
+  font-weight: 800;
+}
+
+.main-title {
+  position: relative;
+  color:#E6E3DA;
+  z-index: 10;
+  font-size: 5rem;
+  margin: 0px;
+}
+
+.text-container {
+  z-index: 10;
+  text-align: center;
+  width: 70vw;
+  padding: 3vh 10vw;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+}
+
+.home-text {
+  color:#E6E3DA;
+  font-size: 2.5rem;
+  line-height: 2.7rem;
+  font-weight: 900;
+}
+
+.place-home {
+  font-weight: 100;
+}
+
+.ceremony {
+  float: left;
+}
+
+.party {
+  float: right;
+}
+
+.date-home {
+  clear: both;
+}
+
+.ceremony-text {
+  letter-spacing: -2px;
+}
+
+.search-button {
+ background-color: #E6E3DA;
+ color: #CC9E7F;
+ font-family: 'Amatic SC', cursive;
+ font-size: 2rem;
+ padding: 10px 25px;
+ transform: rotate(2deg);
+ border-radius: 3px;
+ margin: 10px 0px 30px 0px;
+}
+
+.search-button:hover {
+ background-color: #E6E3DA;
+ color: #CC9E7F;
+ font-family: 'Amatic SC', cursive;
+ font-size: 2rem;
+ padding: 10px 25px;
+ transform: rotate(2deg);
+ border-radius: 3px;
+}
+
+.input-check {
+  width: 20vw;
+  color: #E6E3DA;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.time-container {
+  width: 100px;
+  height: 100px;
+  background-color: #E6E3DA;
+  border-radius: 2px;
+  margin: 30px 12px 0px 12px;
+}
+
+.time-wrapper {
+  display: inline-block;
+  text-align: center;
+}
+
+.time-text-outside {
+  color:  #E6E3DA;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.time-container span {
+  line-height: 100px;
+  font-size: 3.5rem;
+  color: #CC9E7F;
+}
+
+.invite-text {
+  font-size: 2rem;
+  margin: 70px 0px 30px 0px;
+}
+
+@media (max-width: 600px) {
+  .text-container {
+  width: 100%;
+  }
+  .photo-container {
+    height: 20vh;
+    width: 90vw;
+    bottom: 5vh;
+    top: 77vh;
+    padding: 2vw 2vw 2vw 2vw;
+    right: 5vw;
+  }
+  .photo-item {
+    width: 21vw;
+    height: 100%;
+  }
+  .photo-wrapper-text {
+    display: none;
+  }
+  .invite-text {
+    margin: 30px 0px 30px 0px;
+  }
+  .input-check {
+    width: 50vw;
+    font-size: 3rem;
+  }
+  .search-button {
+    margin-bottom: 5vh;
+  }
+
+  /deep/ .mat-focused .mat-input-placeholder.mat-float, /deep/ .mat-input-placeholder.mat-empty, /deep/ .mat-input-placeholder.mat-float:not(.mat-empty) {
+    font-size: 2rem;
+    color: #E6E3DA;
+  }
+}

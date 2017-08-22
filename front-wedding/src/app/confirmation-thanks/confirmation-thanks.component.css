@@ -1,0 +1,238 @@
+.confirmation-container {
+  /*background-image: url("../../assets/binding_dark.png");*/
+  background-image: url("/images//binding_dark.png");
+  background-position: center;
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+}
+
+.confirmation-container::before {
+  position: absolute;
+  top: 0;
+  content: '';
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.85;
+  background: linear-gradient(to right, #CC9E7F, #C5A17D);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
+}
+
+.main-title {
+  position: relative;
+  color: #E6E3DA;
+  z-index: 10;
+  font-size: 3rem;
+  margin: 0px;
+}
+
+.text-container {
+  z-index: 10;
+  position: relative;
+  text-align: center;
+  width: 65%;
+  display: inline-block;
+  padding: 3vh 10vw;
+  box-sizing: border-box;
+  color:#E6E3DA;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 100;
+}
+
+
+.guest-name {
+  font-weight: 800;
+  margin: 25px 0px 35px 0px;
+}
+
+.thanks-text {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  margin: 0;
+}
+
+.time-text-see-you {
+  margin: 40px 0px 10px 0px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+.calendar-link {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.calendar-link span {
+  color: #E6E3DA;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 30px;
+  margin: 0px 0px 30px 0px;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+.calendar-link img {
+  width: 30px;
+}
+
+.present-button {
+  background-color: #E6E3DA;
+  font-size: 2.5rem;
+  padding: 5px 15px;
+  color: #CC9E7F;
+  margin-top: 25px;
+  display: inline-block;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  font-family: 'Amatic SC', cursive;
+}
+
+.change-situation-text {
+  margin: 0px 0px 0px 0px;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  color: #000;
+}
+
+.goodbye-text {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin: 20px 0px 0px 0px;
+}
+
+.map-container {
+  width: 35%;
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 10;
+  position: relative;
+}
+
+.icon-place {
+  width: 50px;
+  position: absolute;
+}
+
+.toast-icon {
+
+  top: 44%;
+  left: 40%;
+}
+
+.ceremony-icon {
+  top: 46%;
+  left: 42%;
+}
+
+
+
+.time-container {
+  width: 70px;
+  height: 70px;
+  background-color: #E6E3DA;
+  border-radius: 2px;
+  margin: 0px 12px 0px 12px;
+  position: relative;
+  z-index: 10;
+}
+
+.time-wrapper {
+  display: inline-block;
+  text-align: center;
+  z-index: 10;
+}
+
+.location-container {
+  height: 50vh;
+  /*background-image: url('../../assets/fiesta.png');*/
+  background-image: url('/images/fiesta.png');
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  background-color: #E6E3DA;
+  position: relative;
+}
+
+.church-location {
+  background-image: url('../../assets/ceremonia.png');
+    background-image: url('/images/ceremonia.png');
+}
+
+.location-container p {
+  margin: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.time-text-outside {
+  color: #E6E3DA;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.location-text-container {
+  background-color: #E6E3DA;
+  opacity: 0.9;
+  text-align: center;
+  padding: 15px 0px;
+  color: #CC9E7F;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.time-container span {
+  line-height: 70px;
+  font-size: 3.5rem;
+  color: #CC9E7F;
+}
+
+.address-text {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+@media (max-width: 600px) {
+  .text-container {
+    width: 100%;
+    padding: 2vh 5vw;
+  }
+  .confirmation-container {
+    display: grid;
+    overflow: visible;
+  }
+  .thanks-text {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .change-situation-text {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin-top: 7px;
+  }
+  .time-container {
+    margin: 0px 6px;
+    width: 50px;
+    height: 50px;
+  }
+  .time-container span {
+    line-height: 50px;
+  }
+  .map-container {
+    width: 100%;
+  }
+
+}

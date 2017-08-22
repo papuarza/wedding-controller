@@ -1,0 +1,47 @@
+<div class="dialog-container">
+  <div *ngIf="guest == null">
+    <h3 class="guest-name">Lo sentimos!</h3>
+    <p class="invitation-text">
+      No pudimos localizar a nadie <br> con ese número de cédula <br> entre los invitados.
+    </p>
+    <h3 class="guest-name">Vuelve a intentarlo!</h3>
+  </div>
+
+  <div *ngIf="guest && guest !== null">
+    <h3 *ngIf="guest.nickname" class="guest-name">Hola {{guest.nickname}} {{guest.lastName}}!! </h3>
+    <h3 *ngIf="!guest.nickname" class="guest-name">Hola {{guest.name}} {{guest.lastName}}!!</h3>
+    <div class="text-wrapper">
+      <p class="invitation-text first-line">Tenemos el placer de invitarte a</p>
+      <p class="invitation-text our-wedding-text">NUESTRA BODA</p>
+      <p class="invitation-text">que se celebrará el día</p>
+      <p class="invitation-text date-text">28 de Octubre</p>
+      <p class="invitation-text time-text">a las 20:30hs en la iglesia</p>
+      <p class="invitation-text church-name">Santa María y San Nicolás</p>
+      <p class="invitation-text church-adress">(Félix Bogado esq. 18 de Julio)</p>
+      <p class="invitation-text party-invitation-text">Luego celebraremos como corresponde en </p>
+      <p class="invitation-text party-place">La Riviere</p>
+      <p class="invitation-text party-adress">(Av. Paseo del Yacht casi Lapacho Amarillo)</p>
+      <p class="invitation-text goodbye-text">Te Esperamos!</p>
+      <div style="float:left;margin-left: 20px;">
+        <p style="margin-bottom:0px;margin-top:10px;font-size: 1.7rem;">¿Vas a asistir?</p>
+        <span style="font-size: 1.7rem;">NO</span> <md-slide-toggle [(ngModel)]="asistencia" value="" > <span style="font-size: 1.7rem;">SI</span> </md-slide-toggle>
+      </div>
+    <div style="float:right; margin-right: 20px;" *ngIf="guest.couple && asistencia">
+      <p style="margin-bottom: 4px;margin-top:10px;font-size: 1.7rem;">¿Irás con pareja?</p>
+      <md-checkbox [(ngModel)]="asistenciaPareja"></md-checkbox>
+    </div>
+
+
+      <div style="clear:both;">
+        <button md-button (click)="setAssistance()" class="confirm-button">Confirmar</button>
+      </div>
+    </div>
+    <div>
+      <span style="float:left; margin-left: 30px;">Tenida: <strong>Elegante</strong></span>
+      <span style="float:right; margin-right: 30px;" *ngIf="guest.couple">Válido: <strong>2 Personas</strong></span>
+      <span style="float:right; margin-right: 30px;" *ngIf="!guest.couple">Válido: <strong>1 Persona</strong></span>
+    </div>
+
+  </div>
+
+</div>

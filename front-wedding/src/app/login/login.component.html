@@ -1,0 +1,10 @@
+<div class="form-login mat-elevation-z8">
+  <p>Bienvenido! Ingrese por favor su usuario y password.</p>
+  <md-input-container>
+    <input mdInput placeholder="username" [(ngModel)]="username" type="text">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="password" [(ngModel)]="password" type="password">
+  </md-input-container>
+  <button md-raised-button (click)="login()">LOGIN</button>
+</div>

@@ -1,0 +1,104 @@
+<div class="control-panel" *ngIf="user">
+  <div class="mobile-resumee mat-elevation-z8">
+
+    <div class="info-wrapper">
+      <button md-raised-button (click)="logout()" class="mobile-logout">Logout</button>
+      <p class="info-text-resumee">{{invitationsAmount}}</p>
+      <p class="title-text-resumee">Invitaciones</p>
+    </div>
+    <div class="info-wrapper">
+      <p class="info-text-resumee">{{guestsAmount}}</p>
+      <p class="title-text-resumee">Invitados</p>
+    </div>
+    <div class="info-wrapper">
+      <p class="info-text-resumee">{{respondedInvitationsAmount}} <span class="percentage-info">({{invitationPercentage}}%)</span></p>
+      <p class="title-text-resumee">Invitaciones Respondidas</p>
+    </div>
+    <div class="info-wrapper">
+      <p class="info-text-resumee">{{respondedGuestAmount}} <span class="percentage-info" >({{guestPercentage}}%)</span></p>
+      <p class="title-text-resumee">Invitados Confirmados</p>
+    </div>
+    <md-input-container floatPlaceholder="never">
+      <input mdInput #filterMobile placeholder="Filter users">
+    </md-input-container>
+    <button (click)="createDialog()" class="mobile-button"><i class="material-icons">add</i></button>
+  </div>
+  <div class="container">
+    <div class="table-header">
+      <p>Lista de Invitados</p>
+    </div>
+    <md-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container cdkColumnDef="DNI">
+        <md-header-cell *cdkHeaderCellDef> DNI </md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.dni}} </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Nombre">
+        <md-header-cell *cdkHeaderCellDef> Nombre </md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.nombre}} </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Apellido">
+        <md-header-cell *cdkHeaderCellDef> Apellido </md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.apellido}} </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Apodo">
+        <md-header-cell *cdkHeaderCellDef> Apodo </md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.apodo}} </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Pareja">
+        <md-header-cell *cdkHeaderCellDef> Pareja </md-header-cell>
+        <md-cell *cdkCellDef="let row">
+          <span *ngIf="row.pareja" class="true-box">SI</span>
+          <span *ngIf="row.pareja  == false" class="false-box">NO</span>
+        </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Asistencia">
+        <md-header-cell *cdkHeaderCellDef> Asistencia </md-header-cell>
+        <md-cell *cdkCellDef="let row">
+
+          <span *ngIf="row.asistencia" class="true-box"> SI</span>
+          <span *ngIf="row.asistencia  == false" class="false-box"> NO</span>
+        </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Asistencia-Pareja">
+        <md-header-cell *cdkHeaderCellDef> Asist. Pareja </md-header-cell>
+        <md-cell *cdkCellDef="let row">
+          <span *ngIf="row.asistenciaPareja" class="true-box"> SI</span>
+          <span *ngIf="row.asistenciaPareja == false" class="false-box"> NO</span>
+         </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="Editar-Borrar">
+        <md-header-cell *cdkHeaderCellDef> </md-header-cell>
+        <md-cell *cdkCellDef="let row">
+          <button md-icon-button (click)="openDialog(row.dni,row.id)"><md-icon><i class="material-icons edit-icon">mode_edit</i></md-icon></button>
+          <button md-icon-button (click)="deleteDialog(row.dni, row.id)"><md-icon><i class="material-icons delete-icon">delete</i></md-icon></button>
+        </md-cell>
+      </ng-container>
+
+      <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+      <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+
+    </md-table>
+  </div>
+  <div class="resumee-info mat-elevation-z8">
+    <md-input-container floatPlaceholder="never">
+      <input mdInput #filterDesktop placeholder="Filter users">
+    </md-input-container>
+    <button md-raised-button (click)="logout()" class="logout-button">Logout</button>
+    <button md-raised-button (click)="createDialog()" class="new-guest">Nuevo Invitado</button>
+    <p class="title-text-resumee">Invitaciones</p>
+    <p class="info-text-resumee">{{invitationsAmount}}</p>
+    <p class="title-text-resumee">Invitados:</p>
+    <p class="info-text-resumee">{{guestsAmount}}</p>
+    <p class="title-text-resumee">Invitaciones Respondidas:</p>
+    <p class="info-text-resumee">{{respondedInvitationsAmount}} <span class="percentage-info">({{invitationPercentage}}%)</span></p>
+    <p class="title-text-resumee">Invitados Confirmados:</p>
+    <p class="info-text-resumee">{{respondedGuestAmount}} <span class="percentage-info" >({{guestPercentage}}%)</span></p>
+  </div>
+</div>
