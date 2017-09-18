@@ -44,10 +44,17 @@
   font-weight: 100;
 }
 
+.lista-regalos-container {
+  background-color:#E6E3DA;
+  margin-bottom: 10px;
+  padding: 20px 0px;
+  border-radius: 2px;
+}
+
 
 .guest-name {
   font-weight: 800;
-  margin: 25px 0px 35px 0px;
+  margin: 15px 0px 35px 0px;
 }
 
 .thanks-text {
@@ -57,14 +64,14 @@
 }
 
 .time-text-see-you {
-  margin: 40px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
   font-size: 1.8rem;
   line-height: 1.8rem;
 }
 
 .calendar-link {
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .calendar-link span {
@@ -85,11 +92,10 @@ a {
 }
 
 .present-button {
-  background-color: #E6E3DA;
   font-size: 2.5rem;
   padding: 5px 15px;
+  margin: 0;
   color: #CC9E7F;
-  margin-top: 25px;
   display: inline-block;
   border: 0;
   box-shadow: 0;
