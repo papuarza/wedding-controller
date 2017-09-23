@@ -31,7 +31,7 @@
     </tr>
     <tr>
       <td>
-          <md-checkbox [(ngModel)]="formInfo.couple" name="couple">Pareja</md-checkbox>
+          <md-checkbox [(ngModel)]="formInfo.couple" name="couple" (ngModelChange)="checkInput()">Pareja</md-checkbox>
       </td>
     </tr>
 
